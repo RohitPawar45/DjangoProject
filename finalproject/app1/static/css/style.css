@@ -1,0 +1,107 @@
+.logo{
+    width: 100%;
+}
+@keyframes animatetxt{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #24101B;
+
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color:#59D5FE;
+        color: blue;
+    
+    }
+}
+#txt{
+    text-align: center;  
+    position:relative;
+    -webkit-box-reflect: below 1px linear-gradient(transperent,#0008);
+    line-height: 0.70em;
+    outline: none;
+    padding-top: 25px;
+    padding-left: 10px;
+    font-weight:bolder;
+    animation: animatetxt 7s linear infinite;
+}
+
+.head{
+    background-color: #FFFFEB;
+    border-width: 2px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #888830;
+}
+.navigation{
+    background-color:  #062253;   
+    background-color: #33150def;
+    background-color: #24101B;
+    border:groove 2px;
+}
+@keyframes slider{
+    20%{
+        content: url("{% static 'C:/Users/91998/myprojects/finalproject/app1/static/images/11.jpg' %}");
+    }
+    60%{
+        content: url("{% '../images/5.jpg' %}");
+    }
+    100%{
+        content: url("../images/6.jpg");
+    }
+    
+}
+.imgslider{
+        animation-name: slider;
+        animation-delay: 1s;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        height: 400px;
+    }
+
+.greet{
+    border: solid blue 2px;
+                padding: 10px 15px 20px 25px;
+                margin-top: 50px;
+                margin-left: 400px;
+                margin-right: 400px;
+                border-radius: 10px;
+                box-shadow:10px 10px 5px cadetblue;
+                border-color: #FFFFEB;
+                border-width: 10px;
+                border-style:inset;
+                border-top-color: #FFFFEB;
+                border-bottom-width: 8px;
+                text-align: center;
+}
+.youtube{
+    margin-top: 40px;
+    width: 560px;
+    text-align: center;
+    margin-left: 30px;
+    color: brown;
+
+}
+iframe{
+    border-width: 2px;
+    border-style: solid;
+    border-color: #888830;
+    border-radius: 10px;
+}
+#foot{
+    background-color: #FFFFEB;
+    margin: 50px;
+}
+#Copyright{
+    text-align: center;
+    background-color: #24101B;
+    color: white;
+    height: 50px;
+}
+
+
+
+
+/*FeedBack*/
+
+

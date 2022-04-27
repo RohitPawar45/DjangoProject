@@ -1,0 +1,75 @@
+{% extends 'Home.html' %}
+{% block heading %}    
+      <section>   
+
+      <form action='Home.html' method="Post" enctype="multipart/form-data" id="myForm">
+        <fieldset >
+          <legend align='center'><b>Registration Form</b></legend>
+
+        <label  class="form-label">First Name</label>
+        <input type="text" name='name' class="form-control" placeholder="Enter your first name" id="fname"/>
+        <label id='error1' style="visibility:hidden; color: red;">can not be empty</label><br>
+
+        <label  class="form-label">Last Name</label>
+        <input type="text" class="form-control" name='last name' placeholder="Enter your last name" id="lname"/>
+        <label id='error2' style="visibility:hidden; color: red;">can not be empty</label><br>
+        
+        <label  class="form-label">DOB</label>
+        <input type="date" class="form-control" name='dob' id="dob"/>
+        <label id='error4' style="visibility:hidden; color: red;">required</label><br>
+
+        <label  class="form-label">Gender</label>
+        <div>
+        <input type="radio" class="form-check-input" name='gender' checked/>Male
+        <input type="radio" class="form-check-input" name='gender'/>Female<br><br>
+        </div>
+
+        <label  class="form-label">Address</label>
+        <textarea rows="3" cols="15" id="address"></textarea>
+        <label id='error5' style="visibility:hidden; color: red;">required</label><br><br>
+        <label  class="form-label">state</label>
+        <select  class="form-select">
+            <option>-----</option>
+            <option>Maharshtra</option>
+            <option>Gujrat</option>
+            <option>Delhi</option>
+        </select><br><br>
+
+        <label  class="form-label">Phone Number</label>
+        <input type="number" class="form-control" name='phone' min='1' max='120' id="phone"/>
+        <label id='error3' style="visibility:hidden; color: red;">required</label><br>
+
+        <label  class="form-label">Email</label>
+        <input type="email" class="form-control" name='email' id="email"/>
+        <label id='error7' style="visibility:hidden; color: red;">required</label><br>
+
+        <label  class="form-label">Set password</label>
+        <input type="password" id='spwd' name='Password' placeholder="Enter Password" onblur="validatepwd()">
+                <label id ='e1' style="display: none;">too week password</label>
+                <label id ='e2 ' style="display: none;">week password</label>
+                <label id ='e3' style="display: none;">strong password</label><br><br>
+        <label>confirm Password</label>
+        <input type="password"  id='cspwd' name='ConfirmPassword' placeholder="Enter Password">
+                <label id='error6' style="visibility:hidden; color: red;">password should be same</label><br><br>
+
+
+        <label  class="form-label">Proof: </label>
+
+        <input type="checkbox" value='Pan card'>Pan-Card
+        <input type="checkbox" value='Adhar'>Adhar-Card
+        <input type="checkbox" value='Dl'>Driving-License
+        <br><br>
+        <label  class="form-label">Upload Photo</label>
+
+        <input type="file">
+        <br>
+        <br>
+
+        <input type='button' onclick="validate();" value="submit" id="register">
+                
+                <input type="reset" value="reset">
+        </fieldset>
+
+          </form>
+  </section>
+{% endblock heading %}
